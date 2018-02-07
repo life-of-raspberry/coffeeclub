@@ -44,9 +44,6 @@ try:
     pidfile = "/home/pi/CoffeeClub/main.pid"
     open(pidfile,'w').write(pid)
 
-    #user1 = {'Kdnr':1001,'Vorname':'Nico','Nachname':'Studer'}
-    #customer_dict = {1:user1}
-
     while True:
 
         fin = open('stop.txt','r')
