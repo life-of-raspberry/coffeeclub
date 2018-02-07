@@ -5,8 +5,8 @@ from email.MIMEBase import MIMEBase
 def send_email(subject, file_path):
     """ Send email with files attached"""
 
-    from_addr = "coffeclub@gmx.ch"
-    to_addr = "studer.nico@gmx.ch"
+    from_addr = ""
+    to_addr = ""
 
     msg = MIMEMultipart()
     msg['Subject'] = subject
