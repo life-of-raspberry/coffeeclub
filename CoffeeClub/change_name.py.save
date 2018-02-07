@@ -1,0 +1,50 @@
+#!/usr/bin/python
+
+import os, sys
+import ast
+import signal
+import json
+
+try:
+    if os.path.isfile("main.pid"):
+        file = open("main.pid","r")
+        pid = file.read()
+        try:
+            os.kill(int(pid),signal.SIGKILL)
+            print "Process stopped"
+        except:
+            print "Process allready stopped"
+
+    stop = open("stop.txt","w")
+    stop.write("1")
+    stop.close()
+
+    arg = []
+    jj = 1
+    while jj < len(sys.argv):
+        arg.append(ast.literal_eval(sys.argv[jj]))
+        jj += 1
+
+    cust_file = open('customer_list','r')
+    customer_dict = json.loads(cust_file.read())
+    cust_file.close()
+
+    for ii in arg:
+        print ii
+        assert len(ii)==3, "Incorrect Input. Try [ID1,Vorname1,Nachname1] [ID2,...]..."
+        for key in customer_dict:
+            if customer_dict[key]["Kdnr"] == int(ii[0]):
+                customer_dict[key]["Vorname"] = ii[1)
+                customer_dict[key]["Nachname"] = unicode(ii[2])
+                print "Updated Name of ID %s to %s %s" % (ii[0],ii[1],ii[2])
+
+    fout = open('customer_list_test','w')
+    print customer_dict
+    json.dumps(customer_dict, fout,indent=True,encoding="utf-8")
+
+finally:
+    stop = open("stop.txt","w")
+    stop.write("0")
+    stop.close
+
+

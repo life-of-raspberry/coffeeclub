@@ -1,0 +1,36 @@
+2018-02-05 21:19:30,184; main.py started
+2018-02-05 21:19:40,949; Card detected
+2018-02-05 21:19:40,950; Recognized customer Nico Studer. Kdnr: 1001 UID: 1237964559
+2018-02-05 21:22:37,969; Card detected
+2018-02-05 21:22:37,970; Recognized customer Nico Studer. Kdnr: 1001 UID: 1237964559
+2018-02-05 21:24:38,126; Process stopped
+2018-02-05 21:29:30,794; main.py started
+2018-02-05 21:29:33,505; Card detected
+2018-02-05 21:29:33,507; Recognized customer Nico Studer. Kdnr: 1001 UID: 1237964559
+2018-02-05 21:29:37,895; Card detected
+2018-02-05 21:29:37,896; Recognized customer Nico Studer. Kdnr: 1001 UID: 1237964559
+2018-02-05 21:29:55,035; Process stopped
+2018-02-05 21:30:25,149; main.py started
+2018-02-05 21:30:29,244; Card detected
+2018-02-05 21:30:29,250; Process stopped
+2018-02-05 21:30:50,096; main.py started
+2018-02-05 21:30:54,187; Card detected
+2018-02-05 21:30:54,188; Recognized customer Barista unbekannt. Kdnr: 1002 UID: 1237964559
+2018-02-05 21:30:59,127; Process stopped
+2018-02-05 21:31:14,123; main.py started
+2018-02-05 21:31:16,826; Card detected
+2018-02-05 21:31:16,830; Created customer Barista unbekannt. Kdnr: 1002 UID: 1237964559
+2018-02-05 21:31:21,456; Process stopped
+2018-02-05 21:32:04,604; main.py started
+2018-02-05 21:32:07,313; Card detected
+2018-02-05 21:32:07,316; Created customer Barista unbekannt. Kdnr: 1002 UID: 1237964559
+2018-02-05 21:32:12,403; Process stopped
+2018-02-05 21:32:31,829; main.py started
+2018-02-05 21:32:34,596; Card detected
+2018-02-05 21:32:34,598; Recognized customer Nico Studer. Kdnr: 1001 UID: 1237964559
+2018-02-05 21:32:43,867; Process stopped
+2018-02-05 21:33:01,789; main.py started
+2018-02-05 21:33:08,344; Card detected
+2018-02-05 21:33:08,346; Recognized customer Nico Studer. Kdnr: 1001 UID: 1237964559
+2018-02-07 19:54:36,752; main.py started
+2018-02-07 19:56:01,203; main.py started

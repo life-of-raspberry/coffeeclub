@@ -1,0 +1,42 @@
+#!/usr/bin/python
+import logging
+import time
+import json
+from Lcd_display import Lcd_display
+from Rfid_reader import Rfid_reader
+
+logging.basicConfig(format='%(asctime)s %(message)s',filename='eventlog.log',level='INFO')
+logging.info('main.py started')
+
+RFID = Rfid_reader()
+LCD = Lcd_display()
+
+file = open('customer_list','r')
+customer_dict = json.loads(file.read())
+
+hname':'Studer'}
+#customer_dict = {1:user1}
+
+while True:
+    LCD.lcd_string('CoffeeClub CKW',LCD.LCD_LINE_1) 
+    LCD.lcd_string('Bereit!',LCD.LCD_LINE_2)
+    card_id_raw = RFID.scan_card()
+
+    if card_id_raw != 0:
+        card_id = card_id_raw[0]+256*card_id_raw[1]+256^2*card_id_raw[2]+256^3*card_id_raw[3]
+        if card_id in customer_dict:
+           # log event
+           time.sleep(1)
+        else:
+           # add customer
+           new_kdnr = 1001 + len(customer_dict)
+           new_customer = {'Kdnr':new_kdnr,'Vorname':'Barista','Nachname':'unbekannt'}
+           customer_dict[card_id] = new_customer
+
+           with open('customer_list','w') as fout:
+               json.dump(customer_dict, fout)
+
+        LCD.lcd_string('Hello',LCD.LCD_LINE_1)
+        LCD.lcd_string(customer_dict[card_id]['Vorname'],LCD.LCD_LINE_2)
+
+    time.sleep(3)
